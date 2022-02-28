@@ -1,0 +1,31 @@
+{% extends "basetemplate.html" %} 
+{% from "_formHelpers.html" import render_field %}
+
+
+
+
+{% block body %}
+
+
+                <form method="post" class="">
+                    {{ form.csrf_token }}
+                    <div class="card">
+                    <div class="card-header">
+                        <strong>New</strong> Person
+                    </div>
+                    <div class="card-body card-block">
+                            {{ render_field(form.Kontotyp) }}
+                    
+                            {{ render_field(form.Saldo) }} 
+                            {{ render_field(form.PersonID) }} 
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary btn-sm">
+                            <i class="fa fa-dot-circle-o"></i> Save new!
+                        </button>
+                    </div>
+                </div>  
+            </form> 
+   
+
+{% endblock %}
